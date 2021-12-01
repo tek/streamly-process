@@ -5,7 +5,7 @@
 
 {
   nixpkgs ?
-    import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/refs/tags/21.05.tar.gz)
+    import (builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/21a885616cadbe48c6cc717495e63f66ae9274d3.tar.gz)
         {}
 , compiler ? "default"
 , c2nix ? "" # cabal2nix CLI options
@@ -42,8 +42,8 @@ let haskellPackages =
                       nixpkgs.haskell.lib.overrideCabal
                         (super.callHackageDirect
                           { pkg = "streamly";
-                            ver = "0.8.0";
-                            sha256 = "0vy2lkljizlhpbpbybmg9jcmj2g4s1aaqd2dzy5c0y0n4rgwxask";
+                            ver = "0.8.1";
+                            sha256 = "0ywyy7gxjnp32hx8kki0lfn94bnc9mzjh8g6mg65ff3vv28k2vdr";
                           } {})
                         (old:
                           { librarySystemDepends =
